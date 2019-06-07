@@ -1,0 +1,415 @@
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../font/roboto/Roboto-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url('../font/roboto/Roboto-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url('../font/roboto/Roboto-bold.woff2') format('woff2');
+}
+
+/*FIN STYLE HEADER*/
+
+.headerImg{
+    padding: 0;
+    background-image: url('../img/fondoHeader.png');
+
+    top: -20px;
+}
+
+.contenedorBienvenida{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.textoBienvenida{
+    text-align: center;
+    font-size: 60px; 
+    color:white;
+    font-family: 'Roboto-Light';
+}
+
+.textoBienvenida > p{
+    line-height:45px
+}
+
+#pBienvenido{
+    font-family: 'Roboto-bold';
+    font-size: 58px;
+    text-decoration: none;
+    color: white;
+}
+
+.imgBienvenida > img{
+    width: 260px;
+}
+
+.menuNav{
+    margin-top:15px;
+    text-align: center;
+}
+
+.busqueda{
+    margin-top:15px;
+    text-align: center;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image:none !important;
+    filter:none !important;
+}
+
+.menuCursos{
+    position: absolute;
+    background-color: white;
+    top: 59px;
+    z-index: 100;
+    margin-left:16%;
+
+    height: 0;
+    overflow: hidden;
+}
+
+.opciones{
+    padding: 0;
+}
+
+.opciones > p{
+    font-family: 'Roboto-Light';
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+}
+
+.opciones:hover{
+    background-color: #F0F0F0;
+    cursor: pointer;
+}
+/*FIN STYLE HEADER*/
+
+/*LOGIN*/
+
+#formularioLogin{
+    background-image: url('../img/fondoLoginNew.png');
+    margin-top: -19.5px;
+    height: 100%;
+}
+
+.divFormularioLogin{
+    margin-top: 20%;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #f3f3f3;
+}
+
+
+.headerFormularioLogin{
+    text-align: center;
+    background-color: #f3f3f3;
+    height: 120px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.headerFormularioLogin > img{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.headerFormularioLoginImg{
+
+}
+
+.tituloFormularioLogin{
+    text-align: center;
+}
+
+.tituloFormularioLogin > h3{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Roboto-bold';
+}
+
+.form-horizontal{
+    margin-bottom: 60px;
+}
+
+/*FIN LOGIN*/
+
+
+
+
+/*PAGINA PRINCIPAL*/
+
+.cursos{
+    background-color: #f3f3f3;
+    border: 5px solid white;;
+}
+
+.headerCurso{
+    padding: 0;
+}
+
+.headerCurso > img{
+    width: 100%;
+    padding: 0;
+}
+
+.textoCurso > p{
+    font-size: 16px;
+    font-family: 'Roboto-bold';
+}
+
+.btnVer{
+    text-align: center;
+    align-content: center;
+}
+
+/*includes detalle curso modal*/
+.imagenDetalleCursoInclude{
+    text-align: center;
+    align-content: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.imagenDetalleCursoInclude > img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.tituloDetalleCursoInclude > p, 
+.descripcionDetalleCursoInclude > p, 
+.fechaInicio > p,
+.inscritosDetalleCursoInclude > p{
+    font-family: 'Roboto-bold';
+    font-size: 18px;
+}
+
+.tituloDetalleCursoInclude > p > a, 
+.descripcionDetalleCursoInclude > p > a, 
+.fechaInicio > p > a,
+.inscritosDetalleCursoInclude > p > a{
+    font-family: 'Roboto-regular';
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/*fin includes detalle curso modal*/
+
+.page-footer {
+    margin-top: -19px;
+    background-color: #1c577d;
+    height: 70px;
+    color: white;
+}
+
+.footer-copyright > p > a{
+    text-decoration: none;
+    color: white;
+}
+
+/*FIN PAGINA PRINCIPAL*/
+
+
+
+/*INICIO PAGINA PRINCIPAL CURSOS*/
+
+.addCurso{
+    background-color: #8ABEFA;
+    border: 2px dashed #F1F1F1;
+}
+
+.bodyPagina{
+    margin-top: -17px;
+    padding: 0;
+}
+/*FIN PAGINA PRINCIPAL CURSOS*/
+
+/*INICIO PANEL CURSOS LOGUEADO*/
+.panelAdmin{
+    background-color: #f2f2f2;
+}
+
+.imgUsuario{
+    margin-top: 25%;
+    text-align: center;
+}
+
+.imgUsuario > img{
+    width: 170px;
+    height: 170px;
+}
+
+.descripcionUsuario{
+    text-align: center;
+}
+
+.descripcionUsuario > p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Roboto-bold';
+}
+
+.descripcionContenidoDescripcionUsuario{
+    font-size: 16px;
+    font-family: 'Roboto-bold';
+    padding: 4px;
+}
+
+.valoresContenidoDescripcionUsuario{
+    background-color: #cfcfcf;
+    border-radius: 40%;
+    padding: 4px;
+    color: white;
+    text-align: center;
+}
+
+.descripcionUsuariosCursos{
+    margin-bottom: 10px;
+}
+
+.descripcionPerfil{
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-family: 'Roboto-bold';
+    color: #d4a024;
+}
+
+.estandarMantenimiento{
+    border-top: 2px solid #cfcfcf;
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #cfcfcf;
+}
+
+.divTercero{
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.tituloEstandarMantenimiento{
+    font-size: 16px;
+    font-family: 'Roboto-bold';
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.respuesta > p{
+    font-size: 16px;
+    font-family: 'Roboto-bold';
+}
+
+.botonChat:hover{
+    cursor: pointer;
+}
+
+.botonChat{
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    z-index: 100;
+    background-color: #cf9f3a;
+    border-radius: 100%;
+    font-size: 16px;
+    font-family: 'Roboto-Light';
+    color: white;
+    height: 50px;
+    box-shadow: 2px 4px 15px 1px  rgba(0, 0, 0, 0.2);
+}
+
+.botonChat > p{
+    text-decoration: none;
+    color: white;
+    padding: 10px 13px;
+}
+
+.contenidoDelChat{
+    width: 350px;
+    height: 0px;
+    position: fixed;
+    overflow: hidden;
+    margin-bottom: -10px;
+    bottom:0px;
+    right: 30px;
+    z-index: 110;
+    border: 4px solid #ebf0f6;
+    border-radius: 11px 11px 0px 0px;
+}
+
+.minimizarChat > a > img{
+    margin-top: 2px;
+    text-align: right;
+    width: 25px;
+}
+
+.encabezadoChat{
+    background-color: #ff9d02;
+    border-radius: 10px 10px 0px 0px;
+    height: 30px;
+}
+
+.tituloEncabezadoChat > p{
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto-Bold';
+    margin-top: 4px;
+}
+
+.asesorChat{
+    background-color: #f4f6f9;
+    height: 54px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.minimizarChat:hover{
+    cursor: pointer;
+}
+
+.minimizarChat > a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto-bold';
+    margin-left: 15px;
+}
+
+.imgAsesor > img{
+    border-radius: 50%;
+    width: 49px;
+    height: 46px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.descripcionAsesor > p{
+    margin-left: 6px;
+    font-size: 15px;
+    font-family: 'Roboto-Light';
+    margin-bottom: -3px;
+}
+
+.descripcionAsesor > a{
+    margin-left: 6px;
+    font-size: 15px;
+    font-family: 'Roboto-Light';
+    text-decoration: none;
+    color: black;
+}
+
+
+.cuerpoChat{
+    background-color: white;
+    height:100%;
+}
+
+/*FIN PANEL CURSOS LOGUEADO*/

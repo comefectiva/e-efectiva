@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Input;
 
 class personaController extends Controller
 {
@@ -81,4 +83,30 @@ class personaController extends Controller
     {
         //
     }
+
+    public function login(Request $request){
+
+         $data = $request->all();
+
+            $rules = array(
+                'correo' => 'required|email',
+                'password' => 'required'
+            );
+
+
+            $v = Validator::make($data, $rules);
+            
+            if($v->fails())
+            {
+                Input::flash();
+                return redirect()->back()
+                    ->withErrors($v)
+                    ->withInput();
+
+            }else{
+                
+            }
+    }
+
+    
 }
