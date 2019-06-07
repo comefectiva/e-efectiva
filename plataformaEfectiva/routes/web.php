@@ -15,8 +15,22 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/home', function () {
+    if(session('e-efectiva'))
+	{
+    	return view('welcome');	
+	}else{
+		return "Mal";
+	}
+});
+
 Route::get('/login', function(){
 	return view('auth.login');
 });
 
 Route::post('/inicioSesion','personaController@login');
+
+Route::get('/lagout', function(){
+	Session::flush();
+	return redirect('/'); 
+});

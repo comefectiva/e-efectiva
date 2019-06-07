@@ -34,7 +34,7 @@
                             <label for="email" class="col-md-4 control-label">Correo:</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="correo" value="{{ old('correo') }}" required="">
+                                <input id="email" type="email" class="form-control" name="correo_persona" value="{{ old('correo_persona') }}" required="">
                             </div>
                         </div>
 

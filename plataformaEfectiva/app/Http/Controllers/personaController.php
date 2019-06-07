@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
 
 class personaController extends Controller
 {
@@ -84,12 +85,14 @@ class personaController extends Controller
         //
     }
 
+
     public function login(Request $request){
 
-         $data = $request->all();
+            $data = $request->all();
+            $data = request()->except(['_token']);
 
             $rules = array(
-                'correo' => 'required|email',
+                'correo_persona' => 'required|email',
                 'password' => 'required'
             );
 
@@ -104,8 +107,38 @@ class personaController extends Controller
                     ->withInput();
 
             }else{
+
+                $query = DB::table('persona')
+                        ->join('ciudades','persona.ciudad_persona','=','ciudades.id_ciudad')
+                        ->select('persona.*','ciudades.*')
+                        ->where('persona.correo_persona',$request->input('correo_persona'))
+                        ->where('persona.clave_persona',$request->input('password'))->count();
                 
+                if($query>0){
+                    $queryPersona = DB::table('persona')
+                        ->join('ciudades','persona.ciudad_persona','=','ciudades.id_ciudad')
+                        ->select('persona.*','ciudades.*')
+                        ->where('persona.correo_persona',$request->input('correo_persona'))
+                        ->where('persona.clave_persona',$request->input('password'))->get();
+
+                    $request->session()->put('e-efectiva',$queryPersona);
+
+                      return redirect('/home');
+
+                }
+
+
+                  /*return back()
+                    ->withErrors(['correo_persona' => 'No concuerda con nuestro registro'])
+                    ->withInput();
+                    */
             }
+    }
+
+    function lagout(){
+         session_destroy();
+
+        return redirect('/home');
     }
 
     
