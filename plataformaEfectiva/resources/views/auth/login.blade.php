@@ -13,6 +13,14 @@
                     <div class="headerFormularioLoginImg">
                         <img src="{{ asset('/img/fondoFormLogin.png') }}" width="100%">
                     </div>
+                    
+                    @if(session()->has('message'))
+                        <div class="alert alert-danger">
+                            <b>
+                                {{ session()->get('message') }} 
+                            </b>
+                        </div>
+                    @endif
 
                      @if ($errors->any())
                         <div class="alert alert-danger">
@@ -50,7 +58,7 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
                                     </label>
                                 </div>
                             </div>
@@ -59,7 +67,7 @@
                         <div class="btnLogin form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Login
+                                    Entrar
                                 </button>
                             </div>
                         </div>

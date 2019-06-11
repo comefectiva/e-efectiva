@@ -22,6 +22,8 @@
                         <!-- Left Side Of Navbar -->
                         <div class="menuNav col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                             <img class="imagenNavegacion" id="" src="{{ asset('/img/menuNav.png') }}" width="30px;">
+                           
+
                             <!--
                             @can('cursos.index')
                             <li class="nav-item">
@@ -48,9 +50,42 @@
                             @endcan
                             -->
                         </div>
-                        <div class="busqueda col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
-                         
+                         <div class="busqueda col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                {!! Form::open(array('url' => 'cursos/busquedaGlobal', 'method' => 'get')) !!}
+                                <div class="form-group">
+                                    {{ Form::text('nombre', null, ['class' => 'form-control']) }}
+                                </div> 
+                                {!! Form::close() !!}
                         </div>
+                                                <ul class="nav navbar-nav navbar-right">
+                            <!-- Authentication Links -->
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                                    Hola, 
+                                    @foreach(Session::get('e-efectiva') as $value)
+                                        {{ $value->nombre_persona." ".$value->apellido_persona }}
+                                    @endforeach
+                                    <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ url('perfil') }}">Mi perfil</a>
+                                        <a href="{{ url('lagout') }}"
+                                           onclick="event.preventDefault();
+                                                   document.getElementById('logout-form').submit();">
+                                            Cerrar Sesi&oacute;n
+                                        </a>
+
+                                        <form id="logout-form" action="{{ url('lagout') }}" method="GET" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                           
+                        </ul>
                        
                     </div>
                 </div>

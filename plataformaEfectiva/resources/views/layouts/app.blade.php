@@ -88,7 +88,9 @@
 
 
         <script src="{{ asset('js/bootstrap.js') }}"></script>
-        <script src="{{ asset('js/functions.js') }}"></script>
+        <script src="{{ asset('js/functionsWeb.js') }}"></script>
+
+        @yield('scripts')
 
     </body>
 </html>
