@@ -66,3 +66,14 @@ Route::get('/lagout', function(){
 
 /*CRUD PERSONAS*/
 Route::post('/editPerson','personaController@valores');
+Route::post('/edicionPerfilPersona','personaController@edicionPerfil');
+
+
+Route::get('/personas', function(){
+	$queryPersona = DB::table('persona')->paginate(10);
+
+	return View::make('personas.personas', ['personas' => $queryPersona]);	
+});
+
+Route::get('personal/{slug_persona?}','personaController@detallePersona');
+Route::get('/edicion/{slug_persona}','personaController@edicionPersona');

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCiudadesTable extends Migration
+class CreateSesionesTabla extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateCiudadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ciudades', function (Blueprint $table) {
-            $table->bigIncrements('id_ciudad');
-            $table->string('nombre_ciudad');
-            $table->integer('id_estado');
-            $table->string('estado');
+        Schema::create('sesiones_tabla', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('id_usuario');
+            $table->string('ip_maquina');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateCiudadesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ciudades');
+        Schema::dropIfExists('sesiones_tabla');
     }
 }

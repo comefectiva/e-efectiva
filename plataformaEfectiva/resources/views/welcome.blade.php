@@ -17,6 +17,103 @@
         </div>
     </div>
 
+    <!-- ------------------------------------------ -->
+
+    <div class="paneLAdministrador col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9">
+
+        
+        <h3>
+           <span class="
+glyphicon glyphicon-cog"></span> Panel de administraci&oacute;n
+        </h3>
+        <hr>
+        <div class="moduloPersonas col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <span class="glyphicon glyphicon-user"></span>
+            &nbsp;Modulo personas
+        </div>
+          <div class="panel-body">
+            <i>En este modulo usted podra agregar, editar, consultar o eliminar una persona de la plataforma</i>
+            <br><br>
+            <center>
+                <a href="{{url('personas')}}"><button class="btn btn-info">
+                    Ir al modulo&nbsp; <span class="glyphicon glyphicon-share-alt"></span>
+                </button>
+                </a>
+            </center>
+          </div>
+        </div>
+
+        </div>
+        
+
+
+              <div class="moduloCursos col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <span class="glyphicon glyphicon-th"></span>
+            &nbsp;Modulo Cursos
+          </div>
+                    <div class="panel-body">
+            <i>En este modulo usted podra agregar, editar, consultar un curso de la plataforma</i>
+            <br><br><br>
+            <center>
+                <button class="btn btn-success">
+                    Ir al modulo&nbsp; <span class="glyphicon glyphicon-share-alt"></span>
+                </button>
+            </center>
+          </div>
+        </div>
+        
+        </div>
+
+        <div class="moduloLocalizacion col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <span class="glyphicon glyphicon-globe"></span>
+            &nbsp;Modulo Localizacion
+            </div>
+          <div class="panel-body">
+          <i>En este modulo usted podra agregar, editar, consultar Pais, ciudad o estado ingresados en la plataforma</i>
+          <br><br>
+          <center>
+                <button class="btn btn-warning">
+                    Ir al modulo&nbsp; <span class="glyphicon glyphicon-share-alt"></span>
+                </button>
+            </center>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="moduloLocalizacion col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <span class="glyphicon glyphicon-globe"></span>
+            &nbsp;Modulo Localizacion
+            </div>
+          <div class="panel-body">
+          <i>En este modulo usted podra agregar, editar, consultar Pais, ciudad o estado ingresados en la plataforma</i>
+          <br><br>
+          <center>
+                <button class="btn btn-default">
+                    Ir al modulo&nbsp; <span class="glyphicon glyphicon-share-alt"></span>
+                </button>
+            </center>
+            </div>
+        </div>
+        
+        </div>
+
+    </div>
+    
+    <!-- ------------------------------------------ -->
+    
     <div class="cursosUsuario col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9">
 
         

@@ -2,7 +2,7 @@
             <div class="imgUsuario col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 @foreach(Session::get('e-efectiva') as $value)
                     
-                        <img class="img-circle" src="{{url('img/'.''.$value->foto_persona) }}" width="200px">
+                        <img class="img-circle" src="{{url('img/users/'.''.$value->foto_persona) }}" width="100%">
                     
                     @endforeach
             </div>
