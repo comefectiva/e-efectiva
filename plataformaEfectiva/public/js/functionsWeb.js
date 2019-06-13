@@ -56,6 +56,8 @@ $(document).ready(function(){
                 $("#slug_usuario_persona_perfil").prop('disabled', false);
                 $("#clave_persona_perfil").prop('disabled', false);
                 $("#correo_persona_perfil").prop('disabled', false);
+                $("#perfil_persona_perfil").prop('disabled', false);
+
 
                 $("#actualizar_persona_form").prop('disabled', false);
 
@@ -77,6 +79,8 @@ $(document).ready(function(){
                 $("#slug_usuario_persona_perfil").prop('disabled', true);
                 $("#clave_persona_perfil").prop('disabled', true);
                 $("#correo_persona_perfil").prop('disabled', true);
+                $("#perfil_persona_perfil").prop('disabled', false);
+                
 
                 $("#actualizar_persona_form").prop('disabled', true);
 

@@ -23,7 +23,7 @@
 
 
         @if(session('e-efectiva'))
-            @include('includes.nav');
+            @include('includes.nav')
         @endif
 
             <div class="container">

@@ -31,14 +31,26 @@ Route::get('/home', function () {
 });
 
 Route::get('/perfil', function(){
-
-
 	if(session('e-efectiva'))
 	{	
-		 $ciudades = DB::table('ciudades')->get();
+
+		foreach(Session::get('e-efectiva') as $value){
+			$slug_persona = $value->slug_persona;
+		}
+		
+		 $queryPersona = DB::table('persona')
+                        ->leftjoin('ciudades','persona.ciudad_persona','=','ciudades.id_ciudad')
+                        ->leftjoin('perfiles','persona.id_perfil','=','perfiles.id')
+                        ->select('persona.*','ciudades.*','perfiles.*')
+                        ->where('persona.slug_persona',$slug_persona)->get();
+
+
+		$ciudades = DB::table('ciudades')->get();
+		$perfiles = DB::table('perfiles')->get();
+
     	$hashed_random_password =  date('H:i:s').str_random(10);
 
-   		return View::make('personas.perfil', ['password' => $hashed_random_password, 'ciudades' => $ciudades]);	
+   		return View::make('personas.perfil', ['personas' => $queryPersona, 'password' => $hashed_random_password, 'ciudades' => $ciudades, 'perfiles' => $perfiles]);	
 	}else{
 		return view('auth.login');
 	}
@@ -65,15 +77,23 @@ Route::get('/lagout', function(){
 
 
 /*CRUD PERSONAS*/
+
+/* -- Editar perfil titular sesion persona */
 Route::post('/editPerson','personaController@valores');
 Route::post('/edicionPerfilPersona','personaController@edicionPerfil');
+
+
 
 
 Route::get('/personas', function(){
 	$queryPersona = DB::table('persona')->paginate(10);
 
-	return View::make('personas.personas', ['personas' => $queryPersona]);	
+	return View::make('personas.personas', ['personas' => $queryPersona]);
 });
 
 Route::get('personal/{slug_persona?}','personaController@detallePersona');
+
+Route::get('personalEliminar/{slug_persona?}','personaController@eliminarPersona');
+
+Route::post('/busquedaAjax', 'personaController@busquedaAjax');
 Route::get('/edicion/{slug_persona}','personaController@edicionPersona');

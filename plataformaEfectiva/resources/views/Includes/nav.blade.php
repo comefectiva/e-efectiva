@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 30px;">
                 <div class="container">
                     <div class="navbar-header">
 

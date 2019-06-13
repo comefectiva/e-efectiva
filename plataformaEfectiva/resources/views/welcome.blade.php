@@ -94,14 +94,14 @@ glyphicon glyphicon-cog"></span> Panel de administraci&oacute;n
             
         <div class="panel panel-default">
           <div class="panel-heading">
-            <span class="glyphicon glyphicon-globe"></span>
-            &nbsp;Modulo Localizacion
+            <span class="glyphicon glyphicon-user"></span>
+            &nbsp;Modulo Perfiles
             </div>
           <div class="panel-body">
-          <i>En este modulo usted podra agregar, editar, consultar Pais, ciudad o estado ingresados en la plataforma</i>
+          <i>En este modulo usted podra agregar, editar, consultar perfiles, tambien agregar permisos a los perfiles.</i>
           <br><br>
           <center>
-                <button class="btn btn-default">
+                <button class="btn btn-primary">
                     Ir al modulo&nbsp; <span class="glyphicon glyphicon-share-alt"></span>
                 </button>
             </center>
